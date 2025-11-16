@@ -147,7 +147,7 @@ try {
                     <input type="hidden" name="action" value="registrar_saida">
                     <div>
                         <label for="placa_saida" class="block text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">
-                            <i class="fas fa-id-card mr-2"></i>Placa do Veículo (saída)
+                            <i class="fas fa-id-card mr-2"></i>Placa do Veículo / Cor da Bicicleta & Dono (saída)
                         </label>
                         <input type="text" name="placa_saida" id="placa_saida" placeholder="ABC-1234" 
                                class="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 text-white placeholder-gray-500 transition-all duration-200" 
