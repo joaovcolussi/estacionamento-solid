@@ -87,18 +87,17 @@ Será criado:
 /src/Infra/database/database.sqlite
 ```
 
-### 3️⃣ Rodar via XAMPP
-Mova o projeto para:
+### 3️⃣ Rodar servidor embutido do PHP
+
 ```
-C:/xampp/htdocs/estacionamento-solid
+php -S localhost:8000 -t public
+```
+#### Depois acesse no navegador:
+```
+http://localhost:8000
+
 ```
 
-Acesse:
-```
-http://localhost/estacionamento-solid/public
-```
-
----
 
 ## 🔄 Fluxo de Funcionamento
 
