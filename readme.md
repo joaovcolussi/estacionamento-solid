@@ -6,19 +6,17 @@ O objetivo é registrar entradas e saídas de veículos, calcular tarifas automa
 
 ---
 
-## 👥 Integrantes do Grupo
+##  Integrantes do Grupo
 
-1. Nome do Integrante 1  
-2. Nome do Integrante 2  
-3. Nome do Integrante 3  
-4. Nome do Integrante 4  
-5. Nome do Integrante 5  
+1. Alexandre José Gomes | 1986088
+2. João Victor Colussi | 2003753
+3. Vinicius Press | 2003646
 
 Preencha com os nomes do grupo.
 
 ---
 
-## 🏗️ Arquitetura do Projeto
+##  Arquitetura do Projeto
 
 ```
 estacionamento-solid/
@@ -51,7 +49,7 @@ estacionamento-solid/
 
 ---
 
-## 🚗 Tipos de Veículos e Tarifas
+##  Tipos de Veículos e Tarifas
 
 | Veículo     | Tarifa por hora |
 |-------------|------------------|
