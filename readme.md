@@ -65,6 +65,13 @@ Regras:
 
 ## ▶️ Como Executar
 
+### 0️⃣ Pré-requisito: habilitar extensões do PHP para SQLite
+
+Antes de rodar o `init_db.php`, ative no php.ini:
+
+    extension=pdo_sqlite
+    extension=sqlite3
+
 ### 1️⃣ Instalar dependências
 ```
 composer install
