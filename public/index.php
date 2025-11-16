@@ -180,8 +180,8 @@ try {
             </div>
 
             <!-- Cards de Faturamento (DINÂMICO - OCP) -->
-            <div class="grid grid-cols-2 md:grid-cols-<?php echo count($relatorio['faturamentoPorTipo']) + 1; ?> gap-4 p-6 bg-black/50">
-                <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-gray-700 transition-all duration-300">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-6 bg-black/50">
+                <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-gray-700 transition-all duration-300 w-full">
                     <div class="flex items-center justify-between">
                         <div>
                             <span class="block text-xs text-gray-500 uppercase tracking-wider mb-1">Faturamento Total</span>
@@ -206,7 +206,7 @@ try {
                     };
                 ?>
 
-                <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-gray-700 transition-all duration-300">
+                <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-gray-700 transition-all duration-300 w-full">
                     <div class="flex items-center justify-between">
                         <div>
                             <span class="block text-xs text-gray-500 uppercase tracking-wider mb-1">Faturamento <?= ucfirst($tipo) ?></span>
