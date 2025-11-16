@@ -108,7 +108,7 @@ try {
                     <input type="hidden" name="action" value="registrar_entrada">
                     <div>
                         <label for="placa" class="block text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">
-                        <i class="fas fa-id-card mr-2"></i>Placa de Veiculo / Cor do Veículo
+                        <i class="fas fa-id-card mr-2"></i>Placa de Veiculo / Cor da Bicicleta & Dono
                         </label>
                         <input type="text" name="placa" id="placa" placeholder="ABC-1234" 
                                class="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-white placeholder-gray-500 transition-all duration-200" 
