@@ -1,4 +1,3 @@
-```php
 <?php
 // --- INICIALIZAÇÃO E PROCESSAMENTO ---
 
@@ -109,7 +108,7 @@ try {
                     <input type="hidden" name="action" value="registrar_entrada">
                     <div>
                         <label for="placa" class="block text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">
-                            <i class="fas fa-id-card mr-2"></i>Placa do Veículo
+                        <i class="fas fa-id-card mr-2"></i>Placa de Veiculo / Cor do Veículo
                         </label>
                         <input type="text" name="placa" id="placa" placeholder="ABC-1234" 
                                class="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-white placeholder-gray-500 transition-all duration-200" 
@@ -195,14 +194,18 @@ try {
                 </div>
             
                 <?php foreach ($relatorio['faturamentoPorTipo'] as $tipo => $faturamento): 
+                    if ($tipo === 'bicicleta') {
+                        continue;
+                    }
+
                     $icon = match($tipo) {
                         'carro' => ['icon' => 'car', 'color' => 'blue', 'bg' => 'blue-900/30', 'border' => 'border-blue-800', 'text' => 'text-blue-400'],
                         'moto' => ['icon' => 'motorcycle', 'color' => 'purple', 'bg' => 'purple-900/30', 'border' => 'border-purple-800', 'text' => 'text-purple-400'],
                         'caminhao' => ['icon' => 'truck', 'color' => 'orange', 'bg' => 'orange-900/30', 'border' => 'border-orange-800', 'text' => 'text-orange-400'],
-                        'bicicleta' => ['icon' => 'bicycle', 'color' => 'gray', 'bg' => 'gray-800/30', 'border' => 'border-gray-700', 'text' => 'text-gray-400'],
                         default => ['icon' => 'car', 'color' => 'gray', 'bg' => 'gray-800/30', 'border' => 'border-gray-700', 'text' => 'text-gray-400'],
                     };
                 ?>
+
                 <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-gray-700 transition-all duration-300">
                     <div class="flex items-center justify-between">
                         <div>
@@ -319,4 +322,3 @@ try {
     </script>
 </body>
 </html>
-```
