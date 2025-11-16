@@ -12,7 +12,6 @@ O objetivo é registrar entradas e saídas de veículos, calcular tarifas automa
 2. João Victor Colussi | 2003753
 3. Vinicius Press | 2003646
 
-Preencha com os nomes do grupo.
 
 ---
 
