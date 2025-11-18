@@ -1,6 +1,6 @@
 # Controle de Estacionamento Inteligente (PHP + SOLID + SQLite)
 
-Sistema desenvolvido em **PHP 8**, utilizando **SQLite**, **Composer (PSR-4)** e uma arquitetura em camadas seguindo princípios **SOLID**, **Clean Code**, **DRY** e **KISS**.
+Sistema desenvolvido em **PHP 8.3**, utilizando **SQLite**, **Composer (PSR-4)** e uma arquitetura em camadas seguindo princípios **SOLID**, **Clean Code**, **DRY** e **KISS**.
 
 O objetivo é registrar entradas e saídas de veículos, calcular tarifas automaticamente e gerar relatórios completos sobre a utilização do estacionamento.
 
