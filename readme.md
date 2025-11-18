@@ -13,6 +13,15 @@ O objetivo é registrar entradas e saídas de veículos, calcular tarifas automa
 3. Vinicius Press | 2003646
 
 
+## Imagens do Projeto
+![Tela Inicial](imgs/1.png)
+
+![Entrada de Veículo](imgs/2.png)
+
+![Saída de Veículo](imgs/3.png)
+
+![Opções de Entrada](imgs/2.png)
+
 ---
 
 ##  Arquitetura do Projeto
