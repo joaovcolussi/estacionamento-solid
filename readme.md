@@ -20,7 +20,7 @@ O objetivo é registrar entradas e saídas de veículos, calcular tarifas automa
 
 ![Saída de Veículo](imgs/3.png)
 
-![Opções de Entrada](imgs/2.png)
+![Opções de Entrada](imgs/4.png)
 
 ---
 
