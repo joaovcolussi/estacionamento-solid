@@ -9,7 +9,6 @@ use App\Infra\SqliteConnection;
 $ds = DIRECTORY_SEPARATOR;
 
 try {
-    // Garante que a pasta do banco existe
     $dbDir = __DIR__ . $ds . 'src' . $ds . 'Infra' . $ds . 'database';
 
     if (!is_dir($dbDir)) {
@@ -17,7 +16,6 @@ try {
         echo "Pasta 'database' criada em: {$dbDir}" . PHP_EOL;
     }
 
-    // Garante que o arquivo do banco existe
     $dbFile = $dbDir . $ds . 'estacionamento.sqlite';
 
     if (!file_exists($dbFile)) {
@@ -25,7 +23,6 @@ try {
         echo "Arquivo 'estacionamento.sqlite' criado em: {$dbFile}" . PHP_EOL;
     }
 
-    // Cria conexão e esquema
     $connection = SqliteConnection::getInstance();
     $connection->initSchema();
 
