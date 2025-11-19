@@ -1,12 +1,8 @@
 <?php
-// --- INICIALIZAÇÃO E PROCESSAMENTO ---
-
-// Habilita a exibição de erros
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Carrega o Autoloader do Composer
 require_once __DIR__ . '/../vendor/autoload.php';
 
 // Importa todas as classes necessárias
@@ -28,17 +24,14 @@ $relatorio = [
 ];
 
 try {
-    // "Injeção de Dependência" manual (Poor Man's DI)
     $connection = SqliteConnection::getInstance();
     $repository = new SqliteRegistroEstacionamentoRepository($connection);
     $tarifaFactory = new TarifaStrategyFactory();
 
-    // Cria os serviços, injetando as dependências
     $entradaService = new RegistrarEntradaService($repository);
     $saidaService = new RegistrarSaidaService($repository, $tarifaFactory);
     $relatorioService = new GerarRelatorioService($repository);
     
-    // Processamento de Formulários (POST)
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $action = $_POST['action'] ?? '';
@@ -56,16 +49,13 @@ try {
             }
 
         } catch (Exception $e) {
-            // Captura erros de regras de negócio (ex: "Veículo já está no pátio")
             $errorMessage = $e->getMessage();
         }
     }
 
-    // Carrega dados para a exibição (GET ou após o POST)
     $relatorio = $relatorioService->executar();
 
 } catch (Exception $e) {
-    // Captura erros fatais na inicialização
     $errorMessage = "Erro fatal na aplicação: " . $e->getMessage();
 }
 ?>
@@ -83,7 +73,6 @@ try {
 <body class="bg-black text-white p-8 font-sans">
 
     <div class="container mx-auto max-w-7xl">
-        <!-- Header -->
         <div class="text-center mb-12">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-900 to-black rounded-full mb-4 border border-gray-700 shadow-2xl">
                 <i class="fas fa-car text-2xl text-gray-300"></i>
@@ -94,9 +83,7 @@ try {
             <p class="text-gray-500 mt-2">Sistema Inteligente de Gestão</p>
         </div>
 
-        <!-- Formulários -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <!-- Entrada -->
             <div class="bg-gradient-to-br from-gray-950 to-black p-8 rounded-xl shadow-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300">
                 <div class="flex items-center mb-6">
                     <div class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center mr-4 border border-green-800">
@@ -135,7 +122,6 @@ try {
                 </form>
             </div>
 
-            <!-- Saída -->
             <div class="bg-gradient-to-br from-gray-950 to-black p-8 rounded-xl shadow-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300">
                 <div class="flex items-center mb-6">
                     <div class="w-12 h-12 bg-red-900/30 rounded-lg flex items-center justify-center mr-4 border border-red-800">
@@ -161,9 +147,7 @@ try {
             </div>
         </div>
 
-        <!-- Relatório -->
         <div class="bg-gradient-to-br from-gray-950 to-black rounded-xl shadow-2xl border border-gray-800 overflow-hidden">
-            <!-- Header do Relatório -->
             <div class="bg-gray-900 px-8 py-6 border-b border-gray-800">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
@@ -179,7 +163,6 @@ try {
                 </div>
             </div>
 
-            <!-- Cards de Faturamento (DINÂMICO - OCP) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-6 bg-black/50">
                 <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-gray-700 transition-all duration-300 w-full">
                     <div class="flex items-center justify-between">
@@ -220,7 +203,6 @@ try {
                 <?php endforeach; ?>
             </div>
 
-            <!-- Tabela -->
             <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-800">
                     <thead class="bg-gray-900">
@@ -287,13 +269,11 @@ try {
             </div>
         </div>
 
-        <!-- Footer -->
         <div class="text-center mt-8 text-gray-600 text-sm">
             <p><i class="fas fa-code mr-1"></i> Sistema desenvolvido com padrões SOLID</p>
         </div>
     </div>
 
-    <!-- Script para Alertas -->
     <script>
         <?php if ($successMessage): ?>
             Swal.fire({
